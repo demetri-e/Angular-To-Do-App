@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	
+	<title>To-Do List | Treehouse Assignment</title>
+	
+	<meta name="description" content="">
+	
+  <!-- Mobile-friendly viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!-- Style sheet link -->
+   <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+   <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet" media="all">
+	
+</head>
+
+<body ng-app="todoListApp">
+	<h1>TO-DO</h1>
+ 	<div ng-controller="mainCtrl" class="list">
+ 		<div class="add">
+ 			<a ng-click="addTodo()" href="">+ Add a New Task</a>
+ 		</div>
+ 		<div class="item" ng-class="{'editing-item': editing, 'edited': todo.edited, 'completed': todo.completed}" ng-repeat="todo in todos | orderBy: 'completed'" ng-init="todo.completed = false">
+	 		<input ng-model="todo.completed" type="checkbox"/>
+	 		<span ng-click="todo.completed = !todo.completed;"></span>
+	 		<label ng-click="editing = true" ng-hide="editing" class="editing-label">{{todo.name}}</label>
+	 		<input ng-change="todo.edited = true" ng-blur="editing = false;" ng-show="editing" ng-model="todo.name" class="editing-label" type="text"/>
+		 	<div class="actions">
+		 		<a ng-click=" editing = !editing " href="">Edit</a>
+		 		<a ng-click="saveTodos(todo)" href="" ng-click="helloConsole()">Save</a>
+		 		<a ng-click="deleteTodo(todo, $index)" href="" class="delete">Delete</a>
+		 	</div>
+	 	</div>
+
+ 	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="scripts/app.js"></script>	
+<script src="scripts/controllers/main.js"></script>	
+<script src="scripts/services/data.js"></script>	
+
+</body>
+</html>

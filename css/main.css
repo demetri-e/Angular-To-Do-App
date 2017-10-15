@@ -1,0 +1,168 @@
+/* line 13, /Users/Demetrio/Desktop/Development Resources/ReadyMadeProjectFiles/scss/partials/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 23, /Users/Demetrio/Desktop/Development Resources/ReadyMadeProjectFiles/scss/partials/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 26, /Users/Demetrio/Desktop/Development Resources/ReadyMadeProjectFiles/scss/partials/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 29, /Users/Demetrio/Desktop/Development Resources/ReadyMadeProjectFiles/scss/partials/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 32, /Users/Demetrio/Desktop/Development Resources/ReadyMadeProjectFiles/scss/partials/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 36, /Users/Demetrio/Desktop/Development Resources/ReadyMadeProjectFiles/scss/partials/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 40, /Users/Demetrio/Desktop/Development Resources/ReadyMadeProjectFiles/scss/partials/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 1, /Users/Demetrio/Desktop/Development Resources/ReadyMadeProjectFiles/scss/partials/_global.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 5, /Users/Demetrio/Desktop/Development Resources/ReadyMadeProjectFiles/scss/partials/_global.scss */
+ul {
+  list-style-type: none;
+}
+
+/* line 9, /Users/Demetrio/Desktop/Development Resources/ReadyMadeProjectFiles/scss/partials/_global.scss */
+img {
+  width: 100%;
+}
+
+/* line 2, /Users/Demetrio/Desktop/Development Resources/ReadyMadeProjectFiles/scss/partials/_typography.scss */
+p {
+  color: red;
+  font-size: 2em;
+}
+
+/* Begin Base Styles(treehouse)*/
+
+body {
+  color: #2d3339;
+  font-family: "Varela Round";
+  text-align: center;
+  background: #3856c1;
+  font-size: 16px; }
+
+a {
+  color: #3f8abf;
+  text-decoration: none; }
+  a:hover {
+    color: #65a1cc; }
+h1 {
+  font-size: 3.5em;
+  padding-top: 1em;
+  color: #fff;
+  font-family: 'Pacifico', cursive;
+  text-shadow: 2px 2px 4px rgba(0,0,0,.5);
+}
+.list {
+  background: #fff;
+  width: 80%;
+  min-width: 550px;
+  margin: 80px auto 0;
+  margin-top: 3.5em;
+  border-top: 40px solid rgba(0,0,0,.5);
+  border-bottom: 40px solid rgba(0,0,0,.5);
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px rgba(0,0,0,.2);
+  text-align: left; }
+  .list .item {
+    border-bottom: 2px solid #edeff0;
+    padding: 17px 0 18px 17px; }
+    .list .item label {
+      padding-left: 5px;
+      cursor: pointer; }
+    .list .item .editing-label {
+      margin-left: 5px;
+      font-family: "Varela Round";
+      border-radius: 2px;
+      border: 2px solid #a7b9c4;
+      font-size: 16px;
+      padding: 15px 0 15px 10px;
+      width: 60%; }
+    .list .item .actions {
+      float: right;
+      margin-right: 20px; }
+      .list .item .actions .delete {
+        color: #ed5a5a;
+        margin-left: 10px; }
+        .list .item .actions .delete:hover {
+          color: #f28888; }
+    .list .item.editing-item .actions {
+      margin-top: 17px; }
+  .list .edited label:after {
+    content: " edited";
+    text-transform: uppercase;
+    color: #a7b9c4;
+    font-size: 14px;
+    padding-left: 5px; }
+  .list .completed label {
+    color: #a7b9c4;
+    text-decoration: line-through; }
+  .list .add {
+    padding: 25px 0 27px 25px; }
+
+  .list .item .editing-label {
+    border: none;
+  }
+
+input[type="checkbox"] {
+    display:none;
+}
+
+input[type="checkbox"] + span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    background:url(checkbox-empty.svg) left top no-repeat;
+    cursor:pointer;
+}
+input[type="checkbox"]:checked + span {
+    background:url(checkbox-filled.svg) left top no-repeat;
+}
+
+
